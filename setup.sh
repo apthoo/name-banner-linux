@@ -17,7 +17,6 @@
 
 
 
-
 #!/bin/bash
 
 # Get the directory of the script
@@ -40,6 +39,8 @@ else
 fi
 
 echo "Setup complete! Please restart your terminal to see the changes."
+
+
 
 
 
