@@ -16,3 +16,13 @@ else
 fi
 
 echo "Setup complete! Please restart your terminal to see the changes."
+echo -e "\e[31m"
+
+echo "                         +=================+
+                         |+-+-+-+-+-+-+-+-+|
+        Team: >>>>       ||P|y|t|h|o|m|a|s||
+                         |+-+-+-+-+-+-+-+-+|
+                         +=================+                                                          
+                  "
+
+                      "
