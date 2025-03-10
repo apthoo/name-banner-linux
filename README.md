@@ -16,8 +16,10 @@ This repository contains a script that displays a welcome message with your name
    chmod u+x setup.sh
    bash welcome.sh
    setup.sh
-   
-
+or
+   git clone https://github.com/apthoo/name-banner-linux.git
+   cd name-banner-linux
+   ./boot.sh
    
 
 ---
