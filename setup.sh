@@ -1,22 +1,3 @@
-# #!/bin/bash
-
-# # Make welcome.sh executable
-# sudo chmod +x welcome.sh
-
-# # Add welcome.sh to .bash_profile or .bashrc
-# if [ -f ~/.bash_profile ]; then
-#     echo "Adding welcome.sh to ~/.bash_profile"
-#     echo "~/path/to/your-repo/welcome.sh" >> ~/.bash_profile
-# elif [ -f ~/.bashrc ]; then
-#     echo "Adding welcome.sh to ~/.bashrc"
-#     echo "~/path/to/your-repo/welcome.sh" >> ~/.bashrc
-# else
-#     echo "Could not find ~/.bash_profile or ~/.bashrc. Please add the following line manually to your shell configuration file:"
-#     echo "~/path/to/your-repo/welcome.sh"
-# fi
-
-
-
 #!/bin/bash
 
 # Get the directory of the script
@@ -39,6 +20,8 @@ else
 fi
 
 echo "Setup complete! Please restart your terminal to see the changes."
+
+
 
 
 
@@ -68,8 +51,5 @@ if [[ "$user" == "yes" || "$user" == "y" ]]; then
 elif [[ "$user" == "no" || "$user" == "n" ]]; then
     echo "No action taken. Exiting..."
     exit
-else
-    echo "Invalid input. Please enter 'yes/y' to reboot or 'no/n' to exit."
-    exit 1
 fi
                       
