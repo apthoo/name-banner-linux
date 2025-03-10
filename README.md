@@ -8,8 +8,17 @@ This repository contains a script that displays a welcome message with your name
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo 
+   git clone https://github.com/apthoo/name-banner-linux.git
+   cd name-banner-linux
+   ls
+   README.md  setup.sh  welcome.sh
+   chmod u+x welcome.sh
+   chmod u+x setup.sh
+   bash welcome.sh
+   setup.sh
+   
+
+   
 
 ---
 
