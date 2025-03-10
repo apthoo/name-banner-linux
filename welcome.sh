@@ -9,12 +9,12 @@ command_exists() {
 if ! command_exists figlet; then
     echo "figlet is not installed. Installing figlet..."
     if command_exists apt; then
-        sudo apt update && sudo apt upgrade -y
+        sudo apt update -y && sudo apt upgrade -y
         sudo apt install -y figlet
     elif command_exists brew; then
-        brew install figlet
+        brew install -y figlet
     elif command_exists yum; then
-        sudo yum update && sudo yum upgrade -y
+        sudo yum update -y && sudo yum upgrade -y
         sudo yum install -y epel-release
         sudo yum install -y figlet
     else
@@ -27,12 +27,12 @@ fi
 if ! command_exists lolcat; then
     echo "lolcat is not installed. Installing lolcat..."
     if command_exists apt; then
-        sudo apt update && sudo apt update -y
+        sudo apt update -y && sudo apt update -y
         sudo apt install -y lolcat
     elif command_exists brew; then
-        brew install lolcat
+        brew install -y lolcat
     elif command_exists yum; then
-        sudo yum update && sudo yum upgrade -y
+        sudo yum update -y && sudo yum upgrade -y
         sudo yum install -y ruby
         sudo gem install -y lolcat
     else
