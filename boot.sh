@@ -10,9 +10,20 @@ sudo chmod u+x setup.sh
 # Run the setup script
 ./setup.sh
 
+
+
+echo -e "\e[31m"
+
+echo "                         +=================+
+                         |+-+-+-+-+-+-+-+-+|
+        Team: >>>>       ||P|y|t|h|o|m|a|s||
+                         |+-+-+-+-+-+-+-+-+|
+                         +=================+                                                          
+                  "
+
+
+
 echo "Setup complete! Please restart your terminal to see the changes."
-
-
 # Prompt the user for input
 read -p "Do you want to reboot the system? (yes/y or no/n): " user
 
