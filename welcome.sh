@@ -15,8 +15,8 @@ if ! command_exists figlet; then
         brew install -y figlet
     elif command_exists yum; then
         sudo yum update -y && sudo yum upgrade -y
-        sudo yum install -y epel-release
-        sudo yum install -y figlet
+        sudo yum install epel-release -y
+        sudo yum install figlet -y
     else
         echo "Unsupported package manager. Please install figlet manually."
         exit 1
@@ -28,12 +28,12 @@ if ! command_exists lolcat; then
     echo "lolcat is not installed. Installing lolcat..."
     if command_exists apt; then
         sudo apt update -y && sudo apt update -y
-        sudo apt install -y lolcat
+        sudo apt install lolcat -y
     elif command_exists brew; then
-        brew install -y lolcat
+        brew install lolcat -y
     elif command_exists yum; then
         sudo yum update -y && sudo yum upgrade -y
-        sudo yum install -y ruby
+        sudo yum install ruby -y
         sudo gem install lolcat 
         echo gems are installing.......
     else
