@@ -1,19 +1,47 @@
+# #!/bin/bash
+
+# # Make welcome.sh executable
+# sudo chmod +x welcome.sh
+
+# # Add welcome.sh to .bash_profile or .bashrc
+# if [ -f ~/.bash_profile ]; then
+#     echo "Adding welcome.sh to ~/.bash_profile"
+#     echo "~/path/to/your-repo/welcome.sh" >> ~/.bash_profile
+# elif [ -f ~/.bashrc ]; then
+#     echo "Adding welcome.sh to ~/.bashrc"
+#     echo "~/path/to/your-repo/welcome.sh" >> ~/.bashrc
+# else
+#     echo "Could not find ~/.bash_profile or ~/.bashrc. Please add the following line manually to your shell configuration file:"
+#     echo "~/path/to/your-repo/welcome.sh"
+# fi
+
+
+
+
 #!/bin/bash
 
-# Make welcome.sh executable
-sudo chmod +x welcome.sh
+# Get the directory of the script
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Add welcome.sh to .bash_profile or .bashrc
+# Make scripts executable
+chmod u+x "$REPO_DIR/welcome.sh"
+chmod u+x "$REPO_DIR/setup.sh"
+
+# Add welcome.sh to .bashrc or .bash_profile
 if [ -f ~/.bash_profile ]; then
     echo "Adding welcome.sh to ~/.bash_profile"
-    echo "~/path/to/your-repo/welcome.sh" >> ~/.bash_profile
+    echo "$REPO_DIR/welcome.sh" >> ~/.bash_profile
 elif [ -f ~/.bashrc ]; then
     echo "Adding welcome.sh to ~/.bashrc"
-    echo "~/path/to/your-repo/welcome.sh" >> ~/.bashrc
+    echo "$REPO_DIR/welcome.sh" >> ~/.bashrc
 else
     echo "Could not find ~/.bash_profile or ~/.bashrc. Please add the following line manually to your shell configuration file:"
-    echo "~/path/to/your-repo/welcome.sh"
+    echo "$REPO_DIR/welcome.sh"
 fi
+
+echo "Setup complete! Please restart your terminal to see the changes."
+
+
 
 echo "Setup complete! Please restart your terminal to see the changes."
 echo -e "\e[31m"
