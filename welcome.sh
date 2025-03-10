@@ -35,6 +35,7 @@ if ! command_exists lolcat; then
         sudo yum update -y && sudo yum upgrade -y
         sudo yum install -y ruby
         sudo gem install lolcat 
+        echo gems are installing.......
     else
         echo "Unsupported package manager. Please install lolcat manually."
         exit 1
