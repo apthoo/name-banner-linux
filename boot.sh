@@ -34,10 +34,7 @@ user=$(echo "$user" | tr '[:upper:]' '[:lower:]')
 if [[ "$user" == "yes" || "$user" == "y" ]]; then
     echo "Rebooting the system..."
     sudo reboot
-elif [[ "$user" == "no" || "$user" == "n" ]]; then
+else 
     echo "No action taken. Exiting..."
-    exit
-else
-    echo "Invalid input. Please enter 'yes/y' to reboot or 'no/n' to exit."
-    exit 1
+    exit  
 fi
