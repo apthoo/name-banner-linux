@@ -4,8 +4,8 @@
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Make scripts executable
-chmod u+x "$REPO_DIR/welcome.sh"
-chmod u+x "$REPO_DIR/setup.sh"
+sudo chmod u+x "$REPO_DIR/welcome.sh"
+sudo chmod u+x "$REPO_DIR/setup.sh"
 
 # Add welcome.sh to .bashrc or .bash_profile
 if [ -f ~/.bash_profile ]; then
@@ -47,9 +47,8 @@ user=$(echo "$user" | tr '[:upper:]' '[:lower:]')
 # Check the user's input
 if [[ "$user" == "yes" || "$user" == "y" ]]; then
     echo "Rebooting the system..."
-    sudo reboot
-# elif [[ "$user" == "no" || "$user" == "n" ]]; then
-else echo "No action taken. Exiting..."
+else 
+    echo "No action taken. Exiting..."
     exit
 fi
                       
