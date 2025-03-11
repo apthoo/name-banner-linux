@@ -48,8 +48,8 @@ user=$(echo "$user" | tr '[:upper:]' '[:lower:]')
 if [[ "$user" == "yes" || "$user" == "y" ]]; then
     echo "Rebooting the system..."
     sudo reboot
-elif [[ "$user" == "no" || "$user" == "n" ]]; then
-    echo "No action taken. Exiting..."
+# elif [[ "$user" == "no" || "$user" == "n" ]]; then
+else echo "No action taken. Exiting..."
     exit
 fi
                       
